@@ -1,0 +1,45 @@
+15h workshop
+============
+
+Keynote 1
+=========
+- Intro to DevOps - historia, qué es y qué no es, de qué se trata, el ejemplo de Holaluz y otros anti-patterns que he vivido -> done
+- Tactical patterns - por dónde empezar, cosas a considerar, etc (1h) -> done
+
+Keynote 2
+=========
+- Deployments / Rollbacks - Automatización total sin excusas -> done
+- Preparación de deploys con rsync, git con Vagrantfile -> done
+- CI / CD con jenkins - pensar qué hago -> done
+
+Keynote 3
+=========
+- Automation y Config Management (ejemplos con Ansible) - ejemplos apache + php, java + jenkins
+
+Keynote 4
+=========
+- Imágenes (Packer / AMIs) vs VMs (Virtualbox / Vagrant) vs Containers (Docker)
+
+Keynote 5
+=========
+- Cloud vs datacenter pros / cons -> done
+- Software architecture encarada a DevOps -> done
+
+Keynote 6
+=========
+- Logs (almacenado y explotación con ELK Stack) -> ejercicio sobre docker compose
+- Time series (almacenado en InfluxDB / Cloudwatch y visualización con Grafana) -> encontrar un setup de docker
+- Monitor / Alerting -> comentar temillas
+
+Keynote 7
+=========
+- Secrets management / Security (Ansible Vault / Hashicorp Vault / Best practices redes)
+- Infosec en general
+
+Keynote 8
+=========
+- Infrastructure as code con Terraform -> ejercicio
+
+
+
+
