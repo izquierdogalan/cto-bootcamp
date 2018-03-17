@@ -1,13 +1,13 @@
-variable "environment_name" {
-  default = "prod"
-}
-
 variable "key_name" {
-  default = "ricard"
+  default = "Put your key pair name here"
 }
 
 variable "project" {
-  default = "ricard"
+  default = "Put your name here"
+}
+
+variable "environment_name" {
+  default = "prod"
 }
 
 variable "vpc_network" {

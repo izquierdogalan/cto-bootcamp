@@ -1,16 +1,15 @@
-variable "environment_name" {
-  default = "test"
+variable "key_name" {
+  default = "Put your key pair name here"
 }
 
-variable "key_name" {
-  default = "ricard"
+variable "project" {
+  default = "Put your name here"
+}
+
+variable "environment_name" {
+  default = "test"
 }
 
 variable "region" {
   default = "eu-west-1"
 }
-
-variable "project" {
-  default = "ricard"
-}
-
