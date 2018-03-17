@@ -14,3 +14,7 @@ vagrant box add ubuntu/trusty64
 vagrant box add ubuntu/xenial64
 vagrant box add geerlingguy/ubuntu1604
 
+In order to successfully run the packer scripts:
+
+Inside the packer folder
+ansible-galaxy install -p provisioners/ansible/galaxy -r provisioners/ansible/requirements.yml
