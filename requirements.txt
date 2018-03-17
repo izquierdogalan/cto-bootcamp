@@ -1,0 +1,16 @@
+Students should have installed:
+
+Git
+Ansible (ideally 2.3.x with pip install ansible==2.3.3)
+Vagrant 2.x
+Virtualbox (5.1.18 works fine)
+Packer latest
+Terraform latest
+Docker
+
+In order to have some vagrant boxes ready:
+
+vagrant box add ubuntu/trusty64
+vagrant box add ubuntu/xenial64
+vagrant box add geerlingguy/ubuntu1604
+

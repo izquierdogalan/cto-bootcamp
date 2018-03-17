@@ -1,0 +1,47 @@
+{
+    "variables": {
+        "aws_access_key": "",
+        "aws_secret_key": "",
+        "subnet_id": "subnet-cc1ae2a9",
+        "region": "eu-west-1",
+        "source_ami": "ami-405f7226",
+        "ami_name": "CTOBootcamp-Ubuntu16-{{isotime \"2006-01-02-15.04.05\"}}"
+    },
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "region": "{{user `region`}}",
+            "instance_type": "t2.micro",
+            "ssh_username": "ubuntu",
+            "source_ami": "{{user `source_ami`}}",
+            "ami_name": "{{ user `ami_name`}}",
+            "associate_public_ip_address": true,
+            "access_key": "{{user `aws_access_key`}}",
+            "secret_key": "{{user `aws_secret_key`}}",
+            "tags": {
+                "version": "16.04",
+                "Name": "{{ user `ami_name`}}",
+                "Description": "CTO Bootcamp Ubuntu 16 Demo"
+            }
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "inline": [
+                "sleep 30",
+                "sudo apt -y update",
+                "sudo apt -y upgrade"
+            ]
+        },
+        {
+            "type": "ansible",
+            "playbook_file": "{{template_dir}}/provisioners/ansible/install-things.yml",
+            "user": "ubuntu",
+            "extra_arguments": [
+                "--extra-vars",
+                "ansible_python_interpreter=/usr/bin/python3"
+            ]
+        }
+    ]
+}
