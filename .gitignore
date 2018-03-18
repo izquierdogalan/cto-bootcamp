@@ -8,3 +8,7 @@ packer/*.box
 # Terraform local state + modules
 **/.terraform
 **/terraform.tfstate*
+# Geerlingguy roles
+**/geerlingguy*
+ansible/**/*.log
+**/.vagrant
