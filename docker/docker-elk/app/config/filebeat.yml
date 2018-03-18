@@ -1,0 +1,17 @@
+filebeat:
+  prospectors:
+    -
+      paths:
+        - /var/log/app.log
+      input_type: log
+      document_type: app_log
+      scan_frequency: 10s
+    -
+      paths:
+        - /var/log/error.log
+      input_type: log
+      document_type: app_error
+      scan_frequency: 10s
+output:
+  logstash:
+    hosts: ["logstash:5044"]

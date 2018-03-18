@@ -12,3 +12,5 @@ packer/*.box
 **/geerlingguy*
 ansible/**/*.log
 **/.vagrant
+# Docker
+docker/docker-elk/**/logs/*.log
