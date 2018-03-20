@@ -2,13 +2,13 @@ filebeat:
   prospectors:
     -
       paths:
-        - /var/log/app.log
+        - /var/log/apache2/fb_access.log
       input_type: log
-      document_type: app_log
+      document_type: apache
       scan_frequency: 10s
     -
       paths:
-        - /var/log/error.log
+        - /var/log/apache2/fb_error.log
       input_type: log
       document_type: app_error
       scan_frequency: 10s
