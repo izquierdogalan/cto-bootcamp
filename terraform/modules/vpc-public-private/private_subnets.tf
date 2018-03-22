@@ -8,6 +8,7 @@ resource "aws_subnet" "private" {
   tags {
     Name        = "${var.project}-${var.environment_name}-Private-${count.index}"
     Environment = "${var.environment_name}"
+    immutable_metadata = '{"purpose":"internal-${aws_vpc.main.id}","target":"ec2"}'
   }
 }
 
